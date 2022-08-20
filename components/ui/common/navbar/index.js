@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="pt-8 pb-4 font-medium text-white">
+      <nav className="pt-2 md:pt-4 lg:pt-6 lg:pb-2 font-medium text-white">
         <div className="flex flex-wrap justify-between items-center mx-auto px-8">
           <a href="/" className="flex items-center gap-2">
             <Image
