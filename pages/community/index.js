@@ -47,7 +47,7 @@ export default function Community() {
 
   return (
     <>
-      <div className="container px-6 py-24 text-gray-100">
+      <div className="container px-6 py-12 lg:py-24 text-gray-100">
         <p className="font-bold text-xl md:text-2xl text-violet-600">
           Community Profiles
         </p>

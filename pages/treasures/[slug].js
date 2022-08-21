@@ -69,7 +69,7 @@ export default function Treasure({ treasure }) {
 
   return (
     <>
-      <div className="container max-w-[60rem] px-4 md:px-24 py-8 md:py-24 text-gray-100">
+      <div className="container max-w-[60rem] px-4 md:px-24 py-8 md:py-12 lg:py-24 text-gray-100">
         <div className="inline-flex">
           <MapIcon className="w-14 h-14" />
           <div className="ml-3">
@@ -128,7 +128,7 @@ export default function Treasure({ treasure }) {
           </div>
         </div>
 
-        <div className="mt-24 mb-12 w-full h-[20rem]">
+        <div className="mt-12 lg:mt-24 mb-12 w-full h-[20rem]">
           <div className="inline-flex gap-2">
             <GlobeIcon className="w-7 h-7 text-violet-600" />
             <p className="mb-4 text-violet-600 text-xl font-medium">
@@ -159,7 +159,7 @@ export default function Treasure({ treasure }) {
           </Map>
         </div>
 
-        <div className="pt-12 grid grid-cols-3 gap-4 mb-24">
+        <div className="pt-12 grid grid-cols-3 gap-4 mb-12 lg:mb-24">
           <div className="col-span-3">
             <div className="inline-flex gap-2">
               <FlagIcon className="w-7 h-7 text-violet-600" />

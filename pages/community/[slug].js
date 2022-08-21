@@ -88,7 +88,7 @@ export default function Profile() {
 
   return (
     <>
-      <div className="container max-w-[60rem] px-4 md:px-24 py-8 md:py-24 text-gray-100">
+      <div className="container max-w-[60rem] px-4 md:px-24 py-8 md:py-12 lg:py-24 text-gray-100">
         <div className="inline-flex">
           <UserCircleIcon className="w-14 h-14" />
           <div className="ml-3">
@@ -137,7 +137,7 @@ export default function Profile() {
         </div>
 
         {user.loggedTreasureAddresses.length > 0 ? (
-          <div className="mt-16 mb-12">
+          <div className="mt-12 lg:mt-16">
             <div className="inline-flex gap-2">
               <ViewListIcon className="w-7 h-7 mt-4 text-violet-600" />
               <p className="my-4 text-violet-600 text-xl font-medium">
@@ -200,7 +200,7 @@ export default function Profile() {
           </div>
         ) : null}
 
-        <div className="w-full h-[20rem] mt-12">
+        <div className="w-full h-[20rem] my-12">
           <div className="inline-flex gap-2">
             <GlobeIcon className="w-7 h-7 mt-4 text-violet-600" />
             <p className="my-4 text-violet-600 text-xl font-medium">
