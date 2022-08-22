@@ -71,7 +71,7 @@ export default function Hide() {
 
   return (
     <>
-      <div className="container max-w-[60rem] px-4 md:px-24 py-24 text-gray-100">
+      <div className="container max-w-[60rem] px-4 md:px-24 py-8 md:py-12 lg:py-24 text-gray-100">
         <div className="inline-flex gap-3">
           <ViewGridAddIcon className="w-8 h-8" />
           <p className="font-bold text-xl md:text-2xl text-violet-600">
@@ -79,7 +79,7 @@ export default function Hide() {
           </p>
         </div>
 
-        <div className="pt-12 grid grid-cols-3 gap-4">
+        <div className="mt-4 sm:pt-12 grid grid-cols-3 gap-4">
           <div className="text-violet-600 font-medium">Title</div>
           <div className="col-span-3 md:col-span-2">
             <input
@@ -100,7 +100,7 @@ export default function Hide() {
           </div>
 
           <div className="col-span-3">
-            <div className="w-full h-[20rem] mb-12">
+            <div className="mt-6 lg:mt-24 mb-12 w-full h-[20rem]">
               <div className="inline-flex">
                 <LocationMarkerIcon className="w-7 h-7 mt-4 text-violet-600" />
                 <p className="ml-2 my-4 text-violet-600 text-xl font-medium">
@@ -132,7 +132,7 @@ export default function Hide() {
             {newLocation[0]}, {newLocation[1]}
           </div>
 
-          <div className=" my-6">
+          <div className="sm:my-6">
             <Button
               onClick={createTreasure}
               className="

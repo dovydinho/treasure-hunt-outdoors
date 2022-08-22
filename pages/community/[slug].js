@@ -200,7 +200,7 @@ export default function Profile() {
           </div>
         ) : null}
 
-        <div className="w-full h-[20rem] my-12">
+        <div className="mt-6 lg:mt-24 mb-12 w-full h-[20rem]">
           <div className="inline-flex gap-2">
             <GlobeIcon className="w-7 h-7 mt-4 text-violet-600" />
             <p className="my-4 text-violet-600 text-xl font-medium">
