@@ -1,13 +1,13 @@
-const HDWalletProvider = require("@truffle/hdwallet-provider")
-const keys = require("./keys.json")
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+const keys = require('./keys.json');
 
 module.exports = {
-  contracts_build_directory: "./public/contracts",
+  contracts_build_directory: './public/contracts',
   networks: {
     development: {
-     host: "127.0.0.1",
-     port: 7545,
-     network_id: "*",
+      host: '127.0.0.1',
+      port: 7545,
+      network_id: '*'
     },
     ropsten: {
       // must be a thunk, otherwise truffle commands may hang in CI
@@ -40,15 +40,31 @@ module.exports = {
       gasPrice: 20000000000, // how much we are willing to spent for unit of gas
       confirmations: 2, // number of blocks to wait between deployment
       timeoutBlocks: 200 // number of blocks before deployment times out
+    },
+    kovan: {
+      // must be a thunk, otherwise truffle commands may hang in CI
+      provider: () =>
+        new HDWalletProvider({
+          mnemonic: {
+            phrase: keys.MNEMONIC
+          },
+          providerOrUrl: `https://kovan.infura.io/v3/${keys.INFURA_PROJECT_ID}`,
+          addressIndex: 0
+        }),
+      network_id: '42',
+      gas: 5500000, // Gas Limit, How much gas we are willing to spent
+      gasPrice: 20000000000, // how much we are willing to spent for unit of gas
+      confirmations: 2, // number of blocks to wait between deployment
+      timeoutBlocks: 200 // number of blocks before deployment times out
     }
   },
 
   compilers: {
     solc: {
-      version: "0.8.10",
+      version: '0.8.10'
     }
   }
-}
+};
 
 // RINKEBY
 // transaction hash:    0x095b08b0e36f4caf1d1a72ca059de10f43aaf6e3660d48b4e812e0b0c67cb462
