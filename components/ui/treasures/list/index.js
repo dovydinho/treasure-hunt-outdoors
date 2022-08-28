@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { TreasureListBlank } from '@components/ui/treasures';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { FlagIcon } from '@heroicons/react/solid';
-import { TreasureListBlank } from '@components/ui/treasures';
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 export default function TreasureList({ treasures }) {
   const [displayPosts, setDisplayPosts] = useState([]);

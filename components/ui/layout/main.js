@@ -1,5 +1,5 @@
-import { Web3Provider } from '@components/providers';
 import { Navbar } from '@components/ui/common';
+import { Web3Provider } from '@components/providers';
 
 export default function MainLayout({ children }) {
   return (

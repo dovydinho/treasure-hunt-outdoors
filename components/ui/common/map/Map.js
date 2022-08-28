@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
 import L from 'leaflet';
 import * as ReactLeaflet from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import { useEffect } from 'react';
 
 import MarkerClusterGroup from 'react-leaflet-markercluster';
 import 'react-leaflet-markercluster/dist/styles.min.css';

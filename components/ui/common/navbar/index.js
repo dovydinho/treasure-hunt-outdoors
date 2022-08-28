@@ -1,6 +1,5 @@
-import Link from 'next/link';
-import { useWeb3 } from '@components/providers';
 import { Button } from '@components/ui/common';
+import { useWeb3 } from '@components/providers';
 import { useAccount, useNetwork } from '@components/hooks/web3';
 import {
   PlusCircleIcon,
@@ -8,8 +7,8 @@ import {
   MenuIcon,
   XIcon
 } from '@heroicons/react/outline';
-import { useState } from 'react';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function Navbar() {
   const { connect, isLoading, requireInstall } = useWeb3();
