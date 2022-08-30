@@ -64,6 +64,15 @@ export default function TreasureListBlank() {
           </div>
         </div>
       </div>
+      <div className="p-4 w-full mx-auto">
+        <div className="animate-pulse flex">
+          <div className="flex-1 space-y-6 py-1">
+            <div className="h-2 w-3/4 bg-slate-700 rounded"></div>
+            <div className="h-2 w-1/2 bg-slate-700 rounded"></div>
+            <div className="h-2 bg-slate-700 rounded"></div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

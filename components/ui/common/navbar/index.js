@@ -67,10 +67,10 @@ export default function Navbar() {
                 onClick={() =>
                   window.open('https://metamask.io/download.html', '_blank')
                 }
-                className="hover:text-gray-900 hover:bg-gray-100 bg-red-500 text-gray-100 inline-flex"
+                className="hover:text-gray-900 hover:bg-gray-100 bg-red-500 text-gray-100 inline-flex text-sm sm:text-base pb-1 sm:py-2"
               >
                 <div className="animate-bounce mr-2">
-                  <ArrowCircleDownIcon className="w-6 h-6 m-auto" />
+                  <ArrowCircleDownIcon className="w-6 h-6 mx-auto" />
                 </div>
                 Install Metamask
               </Button>
@@ -134,8 +134,8 @@ export default function Navbar() {
       </nav>
 
       {requireInstall && (
-        <div className="animate-pulse w-96 rounded-lg mx-auto p-4 bg-purple-500 text-gray-100 text-center text-sm">
-          Cannot connect to network. Please install Metamask
+        <div className="animate-pulse w-80 sm:w-96 rounded-lg mx-auto p-4 mt-2 bg-purple-500 text-gray-100 text-center text-sm">
+          Cannot connect to network. Please install Metamask.
         </div>
       )}
 

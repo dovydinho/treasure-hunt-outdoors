@@ -79,7 +79,7 @@ export default function Hide() {
           </p>
         </div>
 
-        <div className="mt-4 sm:pt-12 grid grid-cols-3 gap-4">
+        <div className="mt-4 sm:mt-6 lg:mt-12 grid grid-cols-3 gap-4">
           <div className="text-violet-600 font-medium">Title</div>
           <div className="col-span-3 md:col-span-2">
             <input
@@ -100,7 +100,7 @@ export default function Hide() {
           </div>
 
           <div className="col-span-3">
-            <div className="mt-6 lg:mt-24 mb-12 w-full h-[20rem]">
+            <div className="mt-4 sm:mt-6 lg:mt-12 mb-12 w-full h-[20rem]">
               <div className="inline-flex">
                 <LocationMarkerIcon className="w-7 h-7 mt-4 text-violet-600" />
                 <p className="ml-2 my-4 text-violet-600 text-xl font-medium">

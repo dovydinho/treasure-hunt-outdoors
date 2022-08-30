@@ -56,7 +56,11 @@ export default function Home() {
               onKeyUp={(e) => search(e.target.value)}
             />
           )}
-          <div className="flex flex-col h-[65vh] lg:h-[74vh]">
+          <div
+            className={`flex flex-col ${
+              treasureInitContracts.length > 0 ? `lg:h-[75vh]` : `lg:h-[81vh]`
+            } h-[65vh]`}
+          >
             <TreasureList treasures={treasureContracts} filters={filters} />
           </div>
         </div>
