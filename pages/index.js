@@ -27,7 +27,7 @@ export default function Home() {
         t[1].toLowerCase().indexOf(filters.s.toLowerCase()) >= 0
     );
     setTreasureContracts(list);
-  }, [filters]);
+  }, [filters, treasureInitContracts]);
 
   const search = (s) => {
     setFilters({ s });
@@ -80,7 +80,7 @@ export default function Home() {
                     return (
                       <Marker position={[treasure[5], treasure[6]]} key={i}>
                         <Popup className="custom-popup-style">
-                          <span class="text-xs inline-block py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-green-500 text-white rounded-full">
+                          <span className="text-xs inline-block py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-green-500 text-white rounded-full">
                             {treasure[0] &&
                               treasure[0].slice(2, 6) +
                                 `-` +

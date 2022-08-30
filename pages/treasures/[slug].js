@@ -43,7 +43,7 @@ export default function Treasure({ treasure }) {
         setTreasureData(callGetSummary);
         setLocation([callGetSummary[5], callGetSummary[6]]);
       })();
-  }, [web3]);
+  }, [web3, router.query.slug]);
 
   const locateTreasure = async () => {
     setButtonLoading(true);
@@ -63,7 +63,7 @@ export default function Treasure({ treasure }) {
     const map = useMap();
     useEffect(() => {
       map.setView(location);
-    }, [map, location]);
+    }, [map]);
     return null;
   };
 

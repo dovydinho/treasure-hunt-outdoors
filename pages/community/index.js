@@ -1,30 +1,31 @@
 import { LocationMarkerIcon, FlagIcon } from '@heroicons/react/outline';
 import { CommunityBlank } from '@components/ui/community';
 import { useWeb3 } from '@components/providers';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import MainLayout from '@components/ui/layout/main';
 
 export default function Community() {
-  const users = [];
   const [uniqueUsers, setUniqueUsers] = useState([]);
   const [usersActivity, setUsersActivity] = useState([]);
   const [collection, setCollection] = useState([]);
   const { contract } = useWeb3();
 
   useEffect(() => {
+    let users = [];
+
     contract &&
       (async function () {
         let getUsersActivity = await contract.methods.getUsersActivity().call();
         setUsersActivity(getUsersActivity);
-        for (let i = 0; i < getUsersActivity.length; i++) {
-          let userAddress = getUsersActivity[i][0];
+        for (let i = 0; i < usersActivity.length; i++) {
+          let userAddress = usersActivity[i][0];
           users.push(userAddress);
         }
         setUniqueUsers([...new Set(users)]);
       })();
-  }, [contract]);
+  }, [contract, usersActivity]);
 
   useEffect(() => {
     let dataArray = [];
@@ -43,7 +44,7 @@ export default function Community() {
       dataArray.push([uniqueAddress, loggedAmount, hiddenAmount]);
     }
     setCollection(dataArray);
-  }, [uniqueUsers]);
+  }, [uniqueUsers, usersActivity]);
 
   return (
     <>
@@ -64,6 +65,7 @@ export default function Community() {
                       width="75px"
                       height="75px"
                       className="rounded-full"
+                      alt=""
                     />
                     <p className="mt-3 font-bold">
                       {user[0].slice(2, 6)} - {user[0].slice(38, 42)}

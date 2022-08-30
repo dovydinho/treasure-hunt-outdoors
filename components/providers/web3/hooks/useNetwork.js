@@ -27,7 +27,7 @@ export const handler = (web3, provider) => () => {
       provider.on('chainChanged', (chainId) => {
         mutate(NETWORKS[parseInt(chainId, 16)]);
       });
-  }, [web3]);
+  }, [mutate]);
 
   return {
     data,

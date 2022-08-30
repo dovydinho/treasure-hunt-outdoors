@@ -77,7 +77,7 @@ export default function Profile() {
           loggedTreasureAddresses: logs
         });
       })();
-  }, [router, contract]);
+  }, [router, contract, web3]);
 
   const MapEffect = ({ useMap }) => {
     const markers = L.markerClusterGroup();

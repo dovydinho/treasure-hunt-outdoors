@@ -9,6 +9,7 @@ import {
 } from '@heroicons/react/outline';
 import Image from 'next/image';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Navbar() {
   const { connect, isLoading, requireInstall } = useWeb3();
@@ -20,17 +21,20 @@ export default function Navbar() {
     <>
       <nav className="pt-2 md:pt-4 lg:pt-6 lg:pb-2 font-medium text-white">
         <div className="flex flex-wrap justify-between items-center mx-auto px-8">
-          <a href="/" className="flex items-center gap-2">
-            <Image
-              src="/img/avatar.jpg"
-              width="50px"
-              height="50px"
-              className="rounded-full w-10 h-10"
-            />
-            <span className="self-center text-xl font-semibold whitespace-nowrap hidden md:block">
-              Treasure Hunt Outdoors
-            </span>
-          </a>
+          <Link href="/">
+            <a className="flex items-center gap-2">
+              <Image
+                src="/img/avatar.jpg"
+                width="50px"
+                height="50px"
+                className="rounded-full w-10 h-10"
+                alt=""
+              />
+              <span className="self-center text-xl font-semibold whitespace-nowrap hidden md:block">
+                Treasure Hunt Outdoors
+              </span>
+            </a>
+          </Link>
           <div className="flex lg:order-2">
             {isLoading ? (
               <Button
@@ -42,17 +46,22 @@ export default function Navbar() {
                 Loading...
               </Button>
             ) : account.data ? (
-              <a href={`/community/${account.data}`}>
-                <Button className="hover:text-gray-900 hover:bg-gray-100 font-bold inline-flex gap-2">
-                  <Image
-                    src="/img/avatarZoom.jpg"
-                    width="25px"
-                    height="25px"
-                    className="rounded-full"
-                  />
-                  {account.data.slice(2, 6) + `-` + account.data.slice(38, 42)}
-                </Button>
-              </a>
+              <Link href={`/community/${account.data}`}>
+                <a>
+                  <Button className="hover:text-gray-900 hover:bg-gray-100 font-bold inline-flex gap-2">
+                    <Image
+                      src="/img/avatarZoom.jpg"
+                      width="25px"
+                      height="25px"
+                      className="rounded-full"
+                      alt=""
+                    />
+                    {account.data.slice(2, 6) +
+                      `-` +
+                      account.data.slice(38, 42)}
+                  </Button>
+                </a>
+              </Link>
             ) : requireInstall ? (
               <Button
                 onClick={() =>
@@ -98,29 +107,26 @@ export default function Navbar() {
           >
             <ul className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0 lg:text-base lg:font-medium">
               <li>
-                <a
-                  href="/"
-                  className="block py-4 pr-4 pl-3 text-gray-300 border-b border-gray-600 hover:bg-gray-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-500 lg:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Treasures
-                </a>
+                <Link href="/">
+                  <a className="block py-4 pr-4 pl-3 text-gray-300 border-b border-gray-600 hover:bg-gray-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-500 lg:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+                    Treasures
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/community"
-                  className="block py-4 pr-4 pl-3 text-gray-300 border-b border-gray-600 hover:bg-gray-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-500 lg:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Community
-                </a>
+                <Link href="/community">
+                  <a className="block py-4 pr-4 pl-3 text-gray-300 border-b border-gray-600 hover:bg-gray-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-500 lg:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+                    Community
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/hide"
-                  className="block py-4 pr-4 pl-3 text-gray-300 border-b border-gray-600 hover:bg-gray-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-500 lg:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 flex"
-                >
-                  <PlusCircleIcon className="w-6 h-6 mr-1" />
-                  Hide a Cache
-                </a>
+                <Link href="/hide">
+                  <a className="block py-4 pr-4 pl-3 text-gray-300 border-b border-gray-600 hover:bg-gray-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-500 lg:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 flex">
+                    <PlusCircleIcon className="w-6 h-6 mr-1" />
+                    Hide a Cache
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>
