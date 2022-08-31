@@ -43,28 +43,29 @@ export default function Home() {
 
   return (
     <>
-      <section className="container flex flex-col-reverse sm:flex-row gap-6 p-2 lg:pt-12 text-white">
-        <div className="sm:w-1/2 md:w-1/3">
-          {treasureInitContracts.length > 0 && (
-            <input
-              className="w-full
-                    rounded-full bg-transparent 
-                    border border-dashed border-indigo-600 
-                    mb-5 px-8 py-2 focus:outline-none 
-                    placeholder:text-sm placeholder:text-indigo-600 text-gray-100"
-              placeholder="Search by treasure title or address..."
-              onKeyUp={(e) => search(e.target.value)}
-            />
-          )}
+      <section className="container flex flex-col-reverse md:flex-row gap-6 p-2 lg:pt-12 text-white">
+        <div className="w-full md:w-1/3">
           <div
             className={`flex flex-col ${
-              treasureInitContracts.length > 0 ? `lg:h-[75vh]` : `lg:h-[81vh]`
-            } h-[65vh]`}
+              treasureInitContracts.length > 0
+                ? `h-[80vh] lg:h-[75vh]`
+                : `h-[60vh] lg:h-[70vh]`
+            }`}
           >
-            <TreasureList treasures={treasureContracts} filters={filters} />
+            <TreasureList
+              treasures={treasureContracts}
+              filters={filters}
+              search={search}
+            />
           </div>
         </div>
-        <div className="w-full sm:w-1/2 md:w-2/3 h-96 min-h-0 sm:h-[80vh] lg:h-[81vh]">
+        <div
+          className={`w-full md:w-2/3 min-h-0 ${
+            treasureInitContracts.length > 0
+              ? `h-[60vh] md:h-[80vh] lg:h-[75vh]`
+              : `h-[60vh] lg:h-[70vh]`
+          }`}
+        >
           <Map
             className="min-h-full rounded-lg z-0"
             center={position}
