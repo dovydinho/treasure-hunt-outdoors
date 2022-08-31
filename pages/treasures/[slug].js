@@ -207,15 +207,15 @@ export default function Treasure({ treasure }) {
               {treasureData[8]
                 .slice(0)
                 .reverse()
-                .map(function (founder, i) {
+                .map(function (finder, i) {
                   return (
-                    <Link href={`/community/${founder[0]}`} key={i}>
+                    <Link href={`/community/${finder[0]}`} key={i}>
                       <a>
                         <div
                           className={`
                                             group border-b border-b-indigo-500 hover:border-indigo-500 p-5 hover:bg-gray-800
                                             ${
-                                              founder[0] ===
+                                              finder[0] ===
                                               treasureData[8]
                                                 .slice(0)
                                                 .reverse()[
@@ -229,21 +229,19 @@ export default function Treasure({ treasure }) {
                           <p className="text-right text-xs text-gray-100">
                             Located{' '}
                             {moment(
-                              moment.unix(founder[1]),
+                              moment.unix(finder[1]),
                               'YYYYMMDD'
                             ).fromNow()}
                           </p>
                           <p className="text-base font-medium mb-2">
                             <span className="visible md:hidden">
                               0x
-                              {founder[0] &&
-                                founder[0].slice(2, 6) +
+                              {finder[0] &&
+                                finder[0].slice(2, 6) +
                                   `-` +
-                                  founder[0].slice(38, 42)}
+                                  finder[0].slice(38, 42)}
                             </span>
-                            <span className="hidden md:block">
-                              {founder[0]}
-                            </span>
+                            <span className="hidden md:block">{finder[0]}</span>
                           </p>
                           <div className="grid grid-cols-2">
                             <p className="text-xs font-medium text-green-600">
