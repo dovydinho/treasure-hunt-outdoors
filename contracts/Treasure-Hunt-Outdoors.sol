@@ -23,7 +23,7 @@ contract TreasureFactory {
     }
 
     function createTreasure(string memory _title, string memory _hint, string memory _latitude, string memory _longitude) public {
-        Treasure treasure = new Treasure(_title, _hint, _latitude, _longitude, msg.sender, factoryAddress);
+        Treasure treasure = new Treasure(_title, _hint, _latitude, _longitude, payable(msg.sender), factoryAddress);
         treasureContracts.push(treasure);
         treasureContractsCount++;
 
@@ -54,31 +54,31 @@ contract TreasureFactory {
 contract Treasure {
     address public factoryAddress;
     address public treasureAddress;
-    address public creator;
+    address payable public creator;
     string title;
     string hint;
-    uint currentTimestamp;
+    uint timestamp;
     string latitude;
     string longitude;
     mapping(address => bool) located;
     mapping(address => uint) public whenLocated;
     uint public locatedCount;
-    FounderActivity[] public founders;
-    mapping(address => FounderActivity) public founder;
+    FounderActivity[] public finders;
+    mapping(address => FounderActivity) public finder;
 
     struct FounderActivity {
         address user;
         uint timestamp;
     }
 
-    constructor(string memory _title, string memory _hint, string memory _latitude, string memory _longitude, address _creator, address _factoryAddress) {
+    constructor(string memory _title, string memory _hint, string memory _latitude, string memory _longitude, address payable _creator, address _factoryAddress) {
         treasureAddress = address(this);
         creator = _creator;
         title = _title;
         hint = _hint;
         latitude = _latitude;
         longitude = _longitude;
-        currentTimestamp = block.timestamp;
+        timestamp = block.timestamp;
         factoryAddress = _factoryAddress;
 
         TreasureFactory(factoryAddress).addActivity(creator, treasureAddress, 0);
@@ -88,8 +88,8 @@ contract Treasure {
         require(!located[msg.sender]);
         require(creator != msg.sender);
 
-        founder[msg.sender] = FounderActivity(msg.sender, block.timestamp);
-        founders.push(founder[msg.sender]);
+        finder[msg.sender] = FounderActivity(msg.sender, block.timestamp);
+        finders.push(finder[msg.sender]);
         located[msg.sender] = true;
         locatedCount++;
         whenLocated[msg.sender] = block.timestamp;
@@ -102,11 +102,21 @@ contract Treasure {
             creator,
             title,
             hint,
-            currentTimestamp,
+            timestamp,
             latitude,
             longitude,
             locatedCount,
-            founders
+            finders
         );
     }
+    
+    function remove() onlyCreator() public {
+        selfdestruct(creator);
+    }
+
+    modifier onlyCreator() {
+        require(msg.sender == creator, 'only creator');
+        _;
+    }
+
 }

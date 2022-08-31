@@ -8803,12 +8803,8 @@
   "ast": {
     "absolutePath": "project:/contracts/Treasure-Hunt-Outdoors.sol",
     "exportedSymbols": {
-      "Treasure": [
-        400
-      ],
-      "TreasureFactory": [
-        195
-      ]
+      "Treasure": [400],
+      "TreasureFactory": [195]
     },
     "id": 401,
     "license": "GPL-3.0",
@@ -8816,15 +8812,7 @@
     "nodes": [
       {
         "id": 34,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.7",
-          ".0",
-          "<",
-          "0.9",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.7", ".0", "<", "0.9", ".0"],
         "nodeType": "PragmaDirective",
         "src": "39:31:1"
       },
@@ -8832,15 +8820,11 @@
         "abstract": false,
         "baseContracts": [],
         "canonicalName": "TreasureFactory",
-        "contractDependencies": [
-          400
-        ],
+        "contractDependencies": [400],
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 195,
-        "linearizedBaseContracts": [
-          195
-        ],
+        "linearizedBaseContracts": [195],
         "name": "TreasureFactory",
         "nameLocation": "83:15:1",
         "nodeType": "ContractDefinition",
@@ -9378,9 +9362,7 @@
               "src": "731:324:1",
               "statements": [
                 {
-                  "assignments": [
-                    91
-                  ],
+                  "assignments": [91],
                   "declarations": [
                     {
                       "constant": false,
@@ -10733,9 +10715,7 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 400,
-        "linearizedBaseContracts": [
-          400
-        ],
+        "linearizedBaseContracts": [400],
         "name": "Treasure",
         "nameLocation": "1661:8:1",
         "nodeType": "ContractDefinition",
@@ -12074,10 +12054,7 @@
                       "id": 299,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "2760:7:1",
                       "typeDescriptions": {
@@ -12174,10 +12151,7 @@
                       "id": 307,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "2800:7:1",
                       "typeDescriptions": {
@@ -13305,12 +13279,8 @@
   "legacyAST": {
     "absolutePath": "project:/contracts/Treasure-Hunt-Outdoors.sol",
     "exportedSymbols": {
-      "Treasure": [
-        400
-      ],
-      "TreasureFactory": [
-        195
-      ]
+      "Treasure": [400],
+      "TreasureFactory": [195]
     },
     "id": 401,
     "license": "GPL-3.0",
@@ -13318,15 +13288,7 @@
     "nodes": [
       {
         "id": 34,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.7",
-          ".0",
-          "<",
-          "0.9",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.7", ".0", "<", "0.9", ".0"],
         "nodeType": "PragmaDirective",
         "src": "39:31:1"
       },
@@ -13334,15 +13296,11 @@
         "abstract": false,
         "baseContracts": [],
         "canonicalName": "TreasureFactory",
-        "contractDependencies": [
-          400
-        ],
+        "contractDependencies": [400],
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 195,
-        "linearizedBaseContracts": [
-          195
-        ],
+        "linearizedBaseContracts": [195],
         "name": "TreasureFactory",
         "nameLocation": "83:15:1",
         "nodeType": "ContractDefinition",
@@ -13880,9 +13838,7 @@
               "src": "731:324:1",
               "statements": [
                 {
-                  "assignments": [
-                    91
-                  ],
+                  "assignments": [91],
                   "declarations": [
                     {
                       "constant": false,
@@ -15235,9 +15191,7 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 400,
-        "linearizedBaseContracts": [
-          400
-        ],
+        "linearizedBaseContracts": [400],
         "name": "Treasure",
         "nameLocation": "1661:8:1",
         "nodeType": "ContractDefinition",
@@ -16576,10 +16530,7 @@
                       "id": 299,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "2760:7:1",
                       "typeDescriptions": {
@@ -16676,10 +16627,7 @@
                       "id": 307,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "2800:7:1",
                       "typeDescriptions": {

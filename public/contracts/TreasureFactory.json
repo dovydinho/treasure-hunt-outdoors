@@ -9613,12 +9613,8 @@
   "ast": {
     "absolutePath": "project:/contracts/Treasure-Hunt-Outdoors.sol",
     "exportedSymbols": {
-      "Treasure": [
-        400
-      ],
-      "TreasureFactory": [
-        195
-      ]
+      "Treasure": [400],
+      "TreasureFactory": [195]
     },
     "id": 401,
     "license": "GPL-3.0",
@@ -9626,15 +9622,7 @@
     "nodes": [
       {
         "id": 34,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.7",
-          ".0",
-          "<",
-          "0.9",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.7", ".0", "<", "0.9", ".0"],
         "nodeType": "PragmaDirective",
         "src": "39:31:1"
       },
@@ -9642,15 +9630,11 @@
         "abstract": false,
         "baseContracts": [],
         "canonicalName": "TreasureFactory",
-        "contractDependencies": [
-          400
-        ],
+        "contractDependencies": [400],
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 195,
-        "linearizedBaseContracts": [
-          195
-        ],
+        "linearizedBaseContracts": [195],
         "name": "TreasureFactory",
         "nameLocation": "83:15:1",
         "nodeType": "ContractDefinition",
@@ -10188,9 +10172,7 @@
               "src": "731:324:1",
               "statements": [
                 {
-                  "assignments": [
-                    91
-                  ],
+                  "assignments": [91],
                   "declarations": [
                     {
                       "constant": false,
@@ -11543,9 +11525,7 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 400,
-        "linearizedBaseContracts": [
-          400
-        ],
+        "linearizedBaseContracts": [400],
         "name": "Treasure",
         "nameLocation": "1661:8:1",
         "nodeType": "ContractDefinition",
@@ -12884,10 +12864,7 @@
                       "id": 299,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "2760:7:1",
                       "typeDescriptions": {
@@ -12984,10 +12961,7 @@
                       "id": 307,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "2800:7:1",
                       "typeDescriptions": {
@@ -14115,12 +14089,8 @@
   "legacyAST": {
     "absolutePath": "project:/contracts/Treasure-Hunt-Outdoors.sol",
     "exportedSymbols": {
-      "Treasure": [
-        400
-      ],
-      "TreasureFactory": [
-        195
-      ]
+      "Treasure": [400],
+      "TreasureFactory": [195]
     },
     "id": 401,
     "license": "GPL-3.0",
@@ -14128,15 +14098,7 @@
     "nodes": [
       {
         "id": 34,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.7",
-          ".0",
-          "<",
-          "0.9",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.7", ".0", "<", "0.9", ".0"],
         "nodeType": "PragmaDirective",
         "src": "39:31:1"
       },
@@ -14144,15 +14106,11 @@
         "abstract": false,
         "baseContracts": [],
         "canonicalName": "TreasureFactory",
-        "contractDependencies": [
-          400
-        ],
+        "contractDependencies": [400],
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 195,
-        "linearizedBaseContracts": [
-          195
-        ],
+        "linearizedBaseContracts": [195],
         "name": "TreasureFactory",
         "nameLocation": "83:15:1",
         "nodeType": "ContractDefinition",
@@ -14690,9 +14648,7 @@
               "src": "731:324:1",
               "statements": [
                 {
-                  "assignments": [
-                    91
-                  ],
+                  "assignments": [91],
                   "declarations": [
                     {
                       "constant": false,
@@ -16045,9 +16001,7 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 400,
-        "linearizedBaseContracts": [
-          400
-        ],
+        "linearizedBaseContracts": [400],
         "name": "Treasure",
         "nameLocation": "1661:8:1",
         "nodeType": "ContractDefinition",
@@ -17386,10 +17340,7 @@
                       "id": 299,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "2760:7:1",
                       "typeDescriptions": {
@@ -17486,10 +17437,7 @@
                       "id": 307,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "2800:7:1",
                       "typeDescriptions": {
@@ -18622,8 +18570,8 @@
     "3": {
       "events": {},
       "links": {},
-      "address": "0x42971d1474d1f85655295E21f0B779A4dA17C760",
-      "transactionHash": "0x1bcc345e83a061010372888cefcd208b4a01231f9f904498780b4417d8aed03f"
+      "address": "0xf217Ee4d8ad1FaC2CE811f6BD70B7Ae9dC9A844E",
+      "transactionHash": "0x808b35b33e8e133d7b03bcd26d11b574e725d47eb925665dbd93b1c0d71e11b2"
     }
   },
   "schemaVersion": "3.4.3",

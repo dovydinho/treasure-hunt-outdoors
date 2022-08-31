@@ -36,5 +36,5 @@ module.exports = {
 };
 
 // ROPSTEN
-// contract address:    0x42971d1474d1f85655295E21f0B779A4dA17C760
+// contract address:    0xf217Ee4d8ad1FaC2CE811f6BD70B7Ae9dC9A844E
 // account:             0x7b48Eeedb1f7b6b65d4c9AF86B5BdBB945FF6D50
