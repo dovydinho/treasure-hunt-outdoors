@@ -36,5 +36,6 @@ module.exports = {
 };
 
 // ROPSTEN
-// contract address:    0xf217Ee4d8ad1FaC2CE811f6BD70B7Ae9dC9A844E
+// transaction hash:    0xe75925b7c06bf9552cb4adcfb73a67c9b7f0161505f783e1ba892369cb634b51
+// contract address:    0x6E41D2a146EE85506A83f79578ad3D04CaB2b59D
 // account:             0x7b48Eeedb1f7b6b65d4c9AF86B5BdBB945FF6D50

@@ -49,6 +49,18 @@ contract TreasureFactory {
         activity[_creator] = UserActivity(_creator, _treasureAddress, _side, block.timestamp);
         activities.push(activity[_creator]);
     }
+
+    function removeTreasure(address _treasureAddress) external {
+        Treasure[] storage treasures = treasureContracts;
+
+        for(uint i = 0; i < treasures.length - 1; i++) {
+            if( treasures[i] == Treasure(_treasureAddress) ) {
+            // move to last element?
+                treasures[i] = treasures[treasures.length -1];
+                treasures.pop();
+            }
+        }
+    }
 }
 
 contract Treasure {
@@ -111,6 +123,7 @@ contract Treasure {
     }
     
     function remove() onlyCreator() public {
+        TreasureFactory(factoryAddress).removeTreasure(treasureAddress);
         selfdestruct(creator);
     }
 
