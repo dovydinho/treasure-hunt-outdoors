@@ -3,8 +3,9 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import { FlagIcon } from '@heroicons/react/solid';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { Search } from '@components/ui/common';
 
-export default function TreasureList({ treasures }) {
+export default function TreasureList({ treasures, search }) {
   const [displayPosts, setDisplayPosts] = useState([]);
   const [slice, setSlice] = useState(10);
   const [hasMore, setHasMore] = useState(true);
@@ -88,6 +89,7 @@ export default function TreasureList({ treasures }) {
 
   return (
     <>
+      <Search search={search} />
       <div
         id="scrollableDiv"
         className="overflow-auto border rounded-lg border-indigo-600"
