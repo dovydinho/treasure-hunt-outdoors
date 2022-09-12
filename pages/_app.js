@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
 
   const meta = {
     title: 'Treasure Hunt Outdoors - Web3 Application Demo',
-    description: `Full-stack web3 project demo built by Dovydas Lapinskas. Please visit: https://dovydas.io for more details.`,
+    description: `Full-stack web3 project demo built by Dovydas Lapinskas. Visit dovydas.io for more info.`,
     type: 'website'
   };
 
