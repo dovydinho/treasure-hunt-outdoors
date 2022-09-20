@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
       <Layout>
         <Component {...pageProps} />
 
-        <section className="mt-8 text-center text-sm text-gray-200 uppercase">
+        <section className="py-8 text-center text-sm text-gray-200 uppercase">
           <p className="mb-2">
             Built by{' '}
             <Link href="https://dovydas.io">
