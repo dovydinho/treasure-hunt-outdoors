@@ -4,7 +4,7 @@ import { Web3Provider } from '@components/providers';
 export default function MainLayout({ children }) {
   return (
     <Web3Provider>
-      <div className="bg-gray-900 min-h-screen">
+      <div className="bg-gray-900 min-h-screen pb-2">
         <Navbar />
         {children}
       </div>
