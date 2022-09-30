@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState, useMemo } from 'react';
 import { loadContract } from '@utils/loadContract';
 import detectEthereumProvider from '@metamask/detect-provider';
 import Web3 from 'web3';
-import { setupHooks } from './hooks/setupHooks';
+import { setupHooks } from '@components/web3/hooks/setupHooks';
 
 const Web3Context = createContext(null);
 
@@ -76,9 +76,4 @@ export default function Web3Provider({ children }) {
 
 export function useWeb3() {
   return useContext(Web3Context);
-}
-
-export function useHooks(cb) {
-  const { hooks } = useWeb3();
-  return cb(hooks);
 }

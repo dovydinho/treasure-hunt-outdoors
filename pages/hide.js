@@ -1,19 +1,18 @@
-import MainLayout from '@components/ui/layout/main';
-import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { Map } from '@components/ui/common';
+import { useEffect, useState } from 'react';
+import { MainLayout } from '@components/ui/layouts';
 import { Button } from '@components/ui/common';
-import { useWeb3 } from '@components/providers';
-import { useAccount } from '@components/hooks/web3';
 import {
   EmojiHappyIcon,
   ViewGridAddIcon,
   LocationMarkerIcon
 } from '@heroicons/react/outline';
+import { Map } from '@components/ui/common';
+import { useWeb3 } from '@components/web3';
 
 export default function Hide() {
-  const { contract } = useWeb3();
-  const { account } = useAccount();
+  const { contract, hooks } = useWeb3();
+  const account = hooks.useAccount();
   const DEFAULT_CENTER = [54.898521, 23.903597];
   const [newLocation, setNewLocation] = useState([0, 0]);
   const [buttonLoading, setButtonLoading] = useState(false);
@@ -23,11 +22,11 @@ export default function Hide() {
   const [title, setTitle] = useState('');
   const [hint, setHint] = useState('');
 
-  const handleTitleChange = () => {
-    setTitle(event.target.value);
+  const handleTitleChange = (e) => {
+    setTitle(e.target.value);
   };
-  const handleHintChange = () => {
-    setHint(event.target.value);
+  const handleHintChange = (e) => {
+    setHint(e.target.value);
   };
 
   const createTreasure = async () => {

@@ -1,20 +1,19 @@
+import Link from 'next/link';
+import Image from 'next/image';
+import { useState } from 'react';
 import { Button } from '@components/ui/common';
-import { useWeb3 } from '@components/providers';
-import { useAccount, useNetwork } from '@components/hooks/web3';
 import {
   PlusCircleIcon,
   ArrowCircleDownIcon,
   MenuIcon,
   XIcon
 } from '@heroicons/react/outline';
-import Image from 'next/image';
-import { useState } from 'react';
-import Link from 'next/link';
+import { useWeb3 } from '@components/web3';
 
 export default function Navbar() {
-  const { connect, isLoading, requireInstall } = useWeb3();
-  const { account } = useAccount();
-  const { network } = useNetwork();
+  const { connect, isLoading, requireInstall, hooks } = useWeb3();
+  const account = hooks.useAccount();
+  const network = hooks.useNetwork();
   const [open, setOpen] = useState(false);
 
   return (

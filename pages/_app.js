@@ -1,5 +1,5 @@
-import { Footer } from '@components/ui/common';
 import Head from 'next/head';
+import { Footer } from '@components/ui/common';
 import '../styles/globals.css';
 
 const Noop = ({ children }) => <>{children}</>;

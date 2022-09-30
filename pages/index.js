@@ -1,8 +1,8 @@
-import MainLayout from '@components/ui/layout/main';
 import { useState, useEffect } from 'react';
+import { MainLayout } from '@components/ui/layouts';
 import { Map } from '@components/ui/common';
-import { useTreasures } from '@components/providers/web3/hooks/useTreasures';
 import { TreasureList } from '@components/ui/treasures';
+import { useWeb3 } from '@components/web3';
 
 export default function Home() {
   const [treasureInitContracts, setTreasureInitContracts] = useState([]);
@@ -12,7 +12,8 @@ export default function Home() {
   });
   const [position, setPosition] = useState([54.898521, 23.903597]);
 
-  const data = useTreasures();
+  const { hooks } = useWeb3();
+  const data = hooks.useTreasures();
 
   useEffect(() => {
     setTreasureInitContracts(data);

@@ -1,6 +1,8 @@
+import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import moment from 'moment';
-import MainLayout from '@components/ui/layout/main';
+import { MainLayout } from '@components/ui/layouts';
 import { Map } from '@components/ui/common';
 import {
   GlobeIcon,
@@ -9,9 +11,7 @@ import {
   FlagIcon,
   LocationMarkerIcon
 } from '@heroicons/react/outline';
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import { useWeb3 } from '@components/providers';
+import { useWeb3 } from '@components/web3';
 
 export default function Profile() {
   const router = useRouter();

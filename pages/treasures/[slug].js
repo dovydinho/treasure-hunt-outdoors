@@ -1,8 +1,10 @@
-import MainLayout from '@components/ui/layout/main';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import moment from 'moment';
+import { MainLayout } from '@components/ui/layouts';
 import { Map } from '@components/ui/common';
 import { Button } from '@components/ui/common';
-import Link from 'next/link';
-import moment from 'moment';
 import {
   EmojiHappyIcon,
   FlagIcon,
@@ -10,22 +12,18 @@ import {
   MapIcon,
   ViewListIcon
 } from '@heroicons/react/outline';
-import { useAccount } from '@components/hooks/web3';
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import { useWeb3 } from '@components/providers';
+import { useWeb3 } from '@components/web3';
 
-export default function Treasure({ treasure }) {
+export default function Treasure() {
   const router = useRouter();
-  const { web3 } = useWeb3();
-  const { account } = useAccount();
+  const { web3, hooks } = useWeb3();
+  const account = hooks.useAccount();
   const [treasureContract, setTreasureContract] = useState();
   const [treasureData, setTreasureData] = useState([]);
   const [buttonLoading, setButtonLoading] = useState(false);
+  const [location, setLocation] = useState([54, 24]);
 
   const DEFAULT_CENTER = [54.898521, 23.903597];
-
-  const [location, setLocation] = useState([54, 24]);
 
   useEffect(() => {
     web3 &&
