@@ -73,6 +73,7 @@ contract TreasureFactory {
     }
 
     // @notice Removes treasure.
+    // @notice Function should be restricted and accessible to treasure owners only!
     function removeTreasure(address _treasureAddress) external {
         Treasure[] storage treasures = treasureContracts;
         /*
