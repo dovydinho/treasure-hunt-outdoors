@@ -4,8 +4,10 @@ import detectEthereumProvider from '@metamask/detect-provider';
 import Web3 from 'web3';
 import { setupHooks } from '@components/web3/hooks/setupHooks';
 
+// Web3Context helps to access web3 data inside the components
 const Web3Context = createContext(null);
 
+// Structure of web3 state accessible in components
 const createWeb3State = ({ web3, provider, contract, isLoading }) => {
   return {
     web3,
@@ -16,7 +18,9 @@ const createWeb3State = ({ web3, provider, contract, isLoading }) => {
   };
 };
 
+// Wrapper component for the application
 export default function Web3Provider({ children }) {
+  // Initial Web3Api state method structure is set
   const [web3Api, setWeb3Api] = useState(
     createWeb3State({
       web3: null,
@@ -26,14 +30,16 @@ export default function Web3Provider({ children }) {
     })
   );
 
+  // Set web3 state methods on initial page load
   useEffect(() => {
-    const loadProvider = async () => {
+    (async function () {
       const provider = await detectEthereumProvider();
 
       if (provider) {
         const web3 = new Web3(provider);
+        // Load factory contract
         const contract = await loadContract('TreasureFactory', web3);
-
+        // Set Web3Api state with loaded data
         setWeb3Api(
           createWeb3State({
             web3,
@@ -43,12 +49,13 @@ export default function Web3Provider({ children }) {
           })
         );
       } else {
+        // If provider is not defined, set only loading value
         setWeb3Api((api) => ({ ...api, isLoading: false }));
       }
-    };
-    loadProvider();
+    })();
   }, []);
 
+  // useMemo hook will only run when web3Api dependencies have changed
   const _web3Api = useMemo(() => {
     const { web3, provider, isLoading } = web3Api;
     return {
@@ -74,6 +81,7 @@ export default function Web3Provider({ children }) {
   );
 }
 
+// Hook function to access web3 inside the app components wrapped in Web3Context
 export function useWeb3() {
   return useContext(Web3Context);
 }
