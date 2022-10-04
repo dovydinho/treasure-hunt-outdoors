@@ -2,10 +2,11 @@ import Head from 'next/head';
 import { Footer } from '@components/ui/common';
 import '../styles/globals.css';
 
-const Noop = ({ children }) => <>{children}</>;
+// If layout is not set, return children in simple tags
+const NoLayout = ({ children }) => <>{children}</>;
 
 function MyApp({ Component, pageProps }) {
-  const Layout = Component.Layout ?? Noop;
+  const Layout = Component.Layout ?? NoLayout;
 
   const meta = {
     title: 'Treasure Hunt Outdoors - Web3 Application Demo',
