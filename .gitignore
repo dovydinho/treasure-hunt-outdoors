@@ -31,4 +31,7 @@ yarn-error.log*
 # vercel
 .vercel
 
+# private keys & helpers
 keys.json
+.prettierignore
+.prettierrc.js
