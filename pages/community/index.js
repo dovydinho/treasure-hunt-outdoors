@@ -59,7 +59,7 @@ export default function Community() {
             return (
               <Link href={`/community/${user[0]}`} key={i}>
                 <a className="group">
-                  <div className="p-5 content-center text-center rounded-lg group-hover:bg-gray-800">
+                  <div className="p-5 content-center text-center rounded-lg group-hover:bg-gray-800 transition-all">
                     <Image
                       src="/img/avatarZoom.jpg"
                       width="75px"

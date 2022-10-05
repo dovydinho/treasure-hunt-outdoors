@@ -20,7 +20,7 @@ export default function TreasureList({ treasures, search }) {
             <a>
               <div
                 className={`
-                                flex text-indigo-600 items-center p-4 border-b border-b-indigo-500 hover:bg-gray-800
+                                flex text-indigo-600 items-center p-4 border-b border-b-indigo-500 hover:bg-gray-800 transition-all
                                 ${
                                   treasure[0] ==
                                   treasures[treasures.length - 1][0]
