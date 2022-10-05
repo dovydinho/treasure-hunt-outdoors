@@ -140,17 +140,10 @@ export default function Hide() {
             </div>
 
             <div className="sm:my-6">
-              <Button
-                type="submit"
-                className="
-                            rounded-full border border-indigo-600
-                            text-indigo-500 hover:text-gray-100
-                            px-8 py-2 inline-flex
-                            hover:bg-indigo-500"
-              >
+              <Button type="submit">
                 {buttonLoading == false ? (
                   <>
-                    Create <EmojiHappyIcon className="ml-1 w-6 h-6" />
+                    Create <EmojiHappyIcon className="w-6 h-6" />
                   </>
                 ) : (
                   <>
