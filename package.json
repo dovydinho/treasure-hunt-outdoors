@@ -11,6 +11,7 @@
   "dependencies": {
     "@heroicons/react": "^1.0.6",
     "@metamask/detect-provider": "^1.2.0",
+    "classnames": "^2.3.2",
     "leaflet": "^1.7.1",
     "leaflet.markercluster": "^1.5.3",
     "moment": "^2.29.3",
@@ -25,9 +26,9 @@
     "web3": "^1.7.3"
   },
   "devDependencies": {
-    "@truffle/hdwallet-provider": "^2.0.8",
     "@openzeppelin/contracts": "^4.6.0",
     "@openzeppelin/test-helpers": "^0.5.15",
+    "@truffle/hdwallet-provider": "^2.0.8",
     "autoprefixer": "^10.4.5",
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",

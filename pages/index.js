@@ -13,12 +13,13 @@ export default function Home() {
   const [position, setPosition] = useState([54.898521, 23.903597]);
 
   const { hooks } = useWeb3();
+  const network = hooks.useNetwork();
   const data = hooks.useTreasures();
 
   useEffect(() => {
     setTreasureInitContracts(data);
     setTreasureContracts(data);
-  }, [data]);
+  }, [data, network.isSupported]);
 
   useEffect(() => {
     let list = treasureInitContracts.filter(
@@ -28,7 +29,7 @@ export default function Home() {
         t[1].toLowerCase().indexOf(filters.s.toLowerCase()) >= 0
     );
     setTreasureContracts(list);
-  }, [filters, treasureInitContracts]);
+  }, [filters, treasureInitContracts, network.isSupported]);
 
   const search = (s) => {
     setFilters({ s });

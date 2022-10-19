@@ -88,7 +88,7 @@ export default function Profile() {
 
   return (
     <>
-      <div className="container max-w-[60rem] px-4 md:px-24 py-8 md:py-12 lg:py-24 text-gray-100">
+      <div className="container max-w-[60rem] px-4 md:px-24 py-8 md:pt-12 lg:pt-24 text-gray-100">
         <div className="inline-flex">
           <UserCircleIcon className="w-14 h-14" />
           <div className="ml-3">

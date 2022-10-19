@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: GPL-3.0
+// SPDX-License-Identifier: MIT
 
 pragma solidity >=0.7.0 <0.9.0;
 
@@ -72,16 +72,18 @@ contract TreasureFactory {
         activities.push(activity[_creator]);
     }
 
+    // @notice Checks if function is called by treasure owner.
     // @notice Removes treasure.
-    // @notice Function should be restricted and accessible to treasure owners only!
     function removeTreasure(address _treasureAddress) external {
+        require(Treasure(_treasureAddress).treasureAddress() == msg.sender, 'only treasure');
+
         Treasure[] storage treasures = treasureContracts;
         /*
         *  @notice Loop through all treasure contracts to find the passed treasure.
         *  @notice Move matched treasure to last array element and remove with .pop()
         */
         for(uint i = 0; i < treasures.length - 1; i++) {
-            if( treasures[i] == Treasure(_treasureAddress) ) {
+            if( treasures[i] == Treasure(_treasureAddress)) {
                 treasures[i] = treasures[treasures.length -1];
                 treasures.pop();
             }

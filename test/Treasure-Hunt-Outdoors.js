@@ -229,19 +229,19 @@ contract('Treasure', (accounts) => {
     await treasureFactory.createTreasure('title2', 'hint2', '44', '55', {
       from: accounts[2]
     });
-    let getContracts1 = await treasureFactory.getTreasureContracts();
+    let getContracts = await treasureFactory.getTreasureContracts();
 
-    let treasure1 = await Treasure.at(getContracts1[0]);
-    let treasure2 = await Treasure.at(getContracts1[1]);
-    let treasure3 = await Treasure.at(getContracts1[2]);
+    await Treasure.at(getContracts[0]);
+    let treasure = await Treasure.at(getContracts[1]);
+    await Treasure.at(getContracts[2]);
 
-    assert(getContracts1.length === 3);
+    assert(getContracts.length === 3);
 
-    await treasure2.remove({ from: accounts[1] });
+    await treasure.remove({ from: accounts[1] });
 
-    let getContracts2 = await treasureFactory.getTreasureContracts();
+    getContracts = await treasureFactory.getTreasureContracts();
 
-    assert(getContracts2.length === 2);
+    assert(getContracts.length === 2);
   });
 
   it('should NOT delete treasure if function caller is NOT the creator of treasure', async () => {

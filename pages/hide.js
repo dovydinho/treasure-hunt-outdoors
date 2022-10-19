@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { MainLayout } from '@components/ui/layouts';
-import { Button } from '@components/ui/common';
+import { Button, LoadingButton } from '@components/ui/common';
 import {
   EmojiHappyIcon,
   ViewGridAddIcon,
@@ -75,7 +75,7 @@ export default function Hide() {
 
   return (
     <>
-      <div className="container max-w-[60rem] px-4 md:px-24 py-8 md:py-12 lg:py-24 text-gray-100">
+      <div className="container max-w-[60rem] px-4 md:px-24 py-8 md:pt-12 lg:pt-24 text-gray-100">
         <form onSubmit={(e) => onSubmit(e)}>
           <div className="inline-flex gap-3">
             <ViewGridAddIcon className="w-8 h-8" />
@@ -115,7 +115,7 @@ export default function Hide() {
                   </p>
                 </div>
                 <Map
-                  className="w-full min-h-full rounded-lg"
+                  className="w-full min-h-full rounded-lg z-0"
                   center={DEFAULT_CENTER}
                   zoom={13}
                 >
@@ -140,18 +140,15 @@ export default function Hide() {
             </div>
 
             <div className="sm:my-6">
-              <Button type="submit">
-                {buttonLoading == false ? (
-                  <>
-                    Create <EmojiHappyIcon className="w-6 h-6" />
-                  </>
-                ) : (
-                  <>
-                    <div className="animate-spin w-6 h-6 border-b-2 border-gray-100 rounded-full mr-2" />{' '}
-                    Creating...
-                  </>
-                )}
-              </Button>
+              {!buttonLoading ? (
+                <Button type="submit" className="group uppercase">
+                  Create <EmojiHappyIcon className="w-6 h-6" />
+                </Button>
+              ) : (
+                <LoadingButton type="submit" className="uppercase">
+                  Creating...
+                </LoadingButton>
+              )}
             </div>
           </div>
         </form>

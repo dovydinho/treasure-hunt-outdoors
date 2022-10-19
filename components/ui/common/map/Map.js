@@ -17,7 +17,6 @@ const Map = ({ children, ...rest }) => {
         iconRetinaUrl: '/img/marker-blue.png',
         iconUrl: '/img/marker-blue.png',
         shadowUrl: null
-        // shadowUrl: "/img/leaf-shadow.png",
       });
     })();
   }, []);

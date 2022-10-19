@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import moment from 'moment';
 import { MainLayout } from '@components/ui/layouts';
-import { Map } from '@components/ui/common';
+import { LoadingButton, Map } from '@components/ui/common';
 import { Button } from '@components/ui/common';
 import {
   EmojiHappyIcon,
@@ -67,7 +67,7 @@ export default function Treasure() {
 
   return (
     <>
-      <div className="container max-w-[60rem] px-4 md:px-24 py-8 md:py-12 lg:py-24 text-gray-100">
+      <div className="container max-w-[60rem] px-4 md:px-24 py-8 md:pt-12 lg:pt-24 text-gray-100">
         <div className="inline-flex">
           <MapIcon className="w-14 h-14" />
           <div className="ml-3">
@@ -170,25 +170,12 @@ export default function Treasure() {
               <p className="text-gray-100">
                 You need to be connected to log it!
               </p>
-            ) : (
-              <Button
-                onClick={locateTreasure}
-                className="rounded-lg border
-                                    hover:text-gray-100
-                                    px-24 py-2 inline-flex
-                                    hover:bg-green-500"
-              >
-                {buttonLoading == false ? (
-                  <>
-                    Log it <EmojiHappyIcon className="ml-1 w-6 h-6" />
-                  </>
-                ) : (
-                  <>
-                    <div className="animate-spin w-6 h-6 border-b-2 border-gray-100 rounded-full mr-2" />
-                    Please wait...
-                  </>
-                )}
+            ) : buttonLoading == false ? (
+              <Button onClick={locateTreasure} className="group uppercase">
+                Log it <EmojiHappyIcon className="ml-1 w-6 h-6" />
               </Button>
+            ) : (
+              <LoadingButton className="uppercase">Loading...</LoadingButton>
             )}
           </div>
         </div>
@@ -201,7 +188,7 @@ export default function Treasure() {
                 Latest Community Logs
               </p>
             </div>
-            <div className="overflow-auto border rounded-lg border-indigo-600 my-4 max-h-[22rem]">
+            <div className="overflow-auto border rounded-lg border-indigo-600 mt-4 max-h-[22rem]">
               {treasureData[8]
                 .slice(0)
                 .reverse()

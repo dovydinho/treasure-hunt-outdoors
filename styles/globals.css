@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;900&display=swap');
 /*Tailwind setup*/
 @tailwind base;
 @tailwind components;
@@ -5,29 +6,34 @@
 
 /*Scrollbar for Front page*/
 
+html {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
 /* width */
 ::-webkit-scrollbar {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-    border-radius: 6px;
-    background: #6366f1;
+  border-radius: 6px;
+  background: #6366f1;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #312e81;
-    border-radius: 6px;
-    border: 2px solid #d1d5db;
+  background: #312e81;
+  border-radius: 6px;
+  border: 2px solid #d1d5db;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #3730a3;
+  background: #3730a3;
 }
 
 /* Leaflet popup styling */
-.custom-popup-style .leaflet-popup-content-wrapper, .custom-popup-style .leaflet-popup-tip {
-    background:#312e81;
-    color: lightgray;
+.custom-popup-style .leaflet-popup-content-wrapper,
+.custom-popup-style .leaflet-popup-tip {
+  background: #312e81;
+  color: lightgray;
 }

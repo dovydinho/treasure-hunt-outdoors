@@ -33,5 +33,3 @@ yarn-error.log*
 
 # private keys & helpers
 keys.json
-.prettierignore
-.prettierrc.js

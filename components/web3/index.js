@@ -55,7 +55,7 @@ export default function Web3Provider({ children }) {
     })();
   }, []);
 
-  // useMemo hook will only run when web3Api dependencies have changed
+  // useMemo hook will only run when web3Api dependencies change
   const _web3Api = useMemo(() => {
     const { web3, provider, isLoading } = web3Api;
     return {
