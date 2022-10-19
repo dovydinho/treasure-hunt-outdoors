@@ -29,7 +29,7 @@
     "@openzeppelin/contracts": "^4.6.0",
     "@openzeppelin/test-helpers": "^0.5.15",
     "@truffle/hdwallet-provider": "^2.0.8",
-    "autoprefixer": "^10.4.5",
+    "autoprefixer": "^10.4.12",
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",
     "postcss": "^8.4.12",
