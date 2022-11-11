@@ -89,7 +89,13 @@ export default function Hide() {
             <div className="col-span-3 md:col-span-2">
               <input
                 required
-                className="w-full rounded-xl bg-transparent border border-dashed border-indigo-600 mb-5 px-8 py-2 focus:outline-none placeholder:text-sm placeholder:text-indigo-600 text-gray-100"
+                className="w-full
+                  rounded-lg bg-transparent 
+                  border border-dashed border-indigo-600 
+                  mb-5 px-8 py-2 focus:outline-none
+                  placeholder:text-sm placeholder:text-indigo-600 text-gray-100
+                  hover:border-solid hover:cursor-pointer
+                  focus:border-solid focus:border-indigo-600 focus:shadow focus:shadow-white/10"
                 placeholder="Give cache a name..."
                 name="title"
                 onChange={handleTitleChange}
@@ -99,7 +105,13 @@ export default function Hide() {
             <div className="col-span-3 md:col-span-2">
               <textarea
                 required
-                className="w-full rounded-xl bg-transparent border border-dashed border-indigo-600 mb-5 px-8 py-2 focus:outline-none placeholder:text-sm placeholder:text-indigo-600 text-gray-100"
+                className="w-full
+                  rounded-lg bg-transparent 
+                  border border-dashed border-indigo-600 
+                  mb-5 px-8 py-2 focus:outline-none
+                  placeholder:text-sm placeholder:text-indigo-600 text-gray-100
+                  hover:border-solid hover:cursor-pointer
+                  focus:border-solid focus:border-indigo-600 focus:shadow focus:shadow-white/10"
                 placeholder="Hidden in a van down by the river..."
                 name="hint"
                 onChange={handleHintChange}
