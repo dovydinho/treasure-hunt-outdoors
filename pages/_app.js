@@ -1,6 +1,7 @@
 import Head from 'next/head';
-import { Footer } from '@components/ui/common';
 import '../styles/globals.css';
+
+import { Footer } from '@components/ui/common';
 import Web3Provider from '@components/web3';
 
 // If layout is not set, return children in simple tags
