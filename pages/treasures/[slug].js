@@ -2,9 +2,6 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import moment from 'moment';
-import { MainLayout } from '@components/ui/layouts';
-import { LoadingButton, Map } from '@components/ui/common';
-import { Button } from '@components/ui/common';
 import {
   EmojiHappyIcon,
   FlagIcon,
@@ -12,6 +9,10 @@ import {
   MapIcon,
   ViewListIcon
 } from '@heroicons/react/outline';
+
+import { MainLayout } from '@components/ui/layouts';
+import { LoadingButton, Map } from '@components/ui/common';
+import { Button } from '@components/ui/common';
 import { useWeb3 } from '@components/web3';
 
 export default function Treasure() {
