@@ -2,9 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect, useMemo } from 'react';
 import { LocationMarkerIcon, FlagIcon } from '@heroicons/react/outline';
+
+import { MainLayout } from '@components/ui/layouts';
 import { CommunityBlank } from '@components/ui/community';
 import { useWeb3 } from '@components/web3';
-import { MainLayout } from '@components/ui/layouts';
 
 export default function Community() {
   const [uniqueUsers, setUniqueUsers] = useState([]);
