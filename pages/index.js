@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+
 import { MainLayout } from '@components/ui/layouts';
 import { Map } from '@components/ui/common';
 import { TreasureList } from '@components/ui/treasures';
